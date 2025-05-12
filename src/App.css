@@ -1,0 +1,452 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*The following commands are for pages of this Portfolio*/
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* White text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 2s ease-in;
+  cursor: url('https://cur.cursors-4u.net/mechanics/mec-1/mec70.cur'), auto;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Cursor Animation */
+@keyframes blinkCursor {
+  0% { border-right-color: rgba(255, 255, 255, 0.75); }
+  49% { border-right-color: rgba(255, 255, 255, 0.75); }
+  50% { border-right-color: transparent; }
+  100% { border-right-color: transparent; }
+}
+
+.title-h1::after {
+  content: '|';
+  margin-left: 5px;
+  animation: blinkCursor 1s step-start infinite;
+}
+
+/* Navbar Styles */
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #1f1f1f;
+  margin: 0;
+}
+
+.navbar-list li {
+  margin: 0 20px;
+  font-size: 18px;
+}
+
+.navbar-list li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-list li a:hover {
+  color: red;
+}
+
+/* Home Component */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+/* Left Section: Name, Title, Bio, Socials */
+.home-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.title-h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+/* Right Section: Profile Picture */
+.home-right {
+  flex-shrink: 0;
+  margin-left: 40px;
+  animation: fadeInRight 1s ease-in-out;
+}
+
+.home-right {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  margin: auto;
+}
+
+.profile_picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid transparent; /* Transparent so the spinner can show */
+  position: relative;
+  z-index: 2;
+}
+
+.home-right::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  border: 6px solid red;
+  border-top: 6px solid transparent;
+  border-right: 6px solid transparent;
+  animation: spinBorder 1s linear infinite;
+  z-index: 1;
+}
+
+@keyframes spinBorder {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* Bio */
+.home-left p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* Contact List below bio */
+.contact-container {
+  margin-top: 20px;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+
+/* About Page */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+h2 {
+  color: #ff0000;
+  margin-top: 30px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.education-list, .experience-list {
+  list-style: none;
+  padding: 0;
+}
+
+.education-item, .experience-item {
+  margin-bottom: 30px;
+}
+
+.about_list_items {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/*Contact Styling*/
+.contact-container {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  animation: fadeIn 1s ease-in;
+}
+
+.contact-container h2,
+.contact-container h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: slideDown 1s ease forwards;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.form-control {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #ff0000;
+  box-shadow: 0 0 8px #ff0000;
+}
+
+.btn-primary {
+  background-color: #ff0000;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #cc0000;
+  cursor: pointer;
+}
+
+.email-img {
+  transition: transform 0.3s ease;
+}
+
+.email-img:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+
+/*Footer styling*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #111;
+  color: #fff;
+  overflow: hidden;
+  z-index: 1000;
+  border-top: 2px solid red;
+}
+
+.footer-h3 {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scrollTicker 10s linear infinite;
+  font-size: 1.5rem;
+  color: red;
+}
+
+@keyframes scrollTicker {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/*Project Style*/
+.projects-container {
+  padding: 2rem;
+  color: white;
+  background-color: #111;
+}
+
+.projects-heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ff0000;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.project-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #ff4d4d88;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  color: #ff0000;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.project-meta {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-language {
+  background: #444;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.project-link {
+  color: #00acee;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.project-link:hover {
+  color: #ff4d4d;
+}
+
+
+
+
+
+
+/*=====================*/
+.heading-h1 {
+  color: red;
+  font-size: 2.5rem;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid red; /* Cursor effect */
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink-caret 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* ====== Hover Effect on Links and Buttons ====== */
+a, button, .btn, .navbar-list li {
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover, button:hover, .btn:hover, .navbar-list li:hover {
+  color: red;
+  transform: scale(1.1) rotateZ(2deg);
+  text-shadow: 0 0 8px red, 0 0 12px #ff0040;
+  cursor: url('https://cur.cursors-4u.net/others/oth-8/oth782.cur'), auto; /* Custom hover cursor */
+}
+
+
+
