@@ -19,7 +19,7 @@ const Home = () => {
       Cloud Computing, Network Engineering, Cybersecurity, and Hardware Systems. 
       I enjoy solving complex problems and constantly expanding my knowledge across various
       domains of technology. Whether it's building efficient software, securing digital 
-      infrastructure, or exploring the intricacies of hardware, I'm driven by curiosity 
+      infrastructure, or exploring the complexities of hardware, I'm driven by curiosity 
       and a commitment to creating impactful solutions.
     </p>
 
