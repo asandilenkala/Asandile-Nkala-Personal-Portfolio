@@ -1,5 +1,5 @@
 import React from 'react';
-import profile from '../folder/Asandile.jpeg';
+import profile from '../folder/Asandile.jpg';
 import instagramIcon from '../folder/instagram.png';
 import linkedinIcon from '../folder/linkedin.png';
 import githubIcon from '../folder/github.png';
