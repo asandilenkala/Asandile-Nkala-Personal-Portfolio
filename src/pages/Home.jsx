@@ -15,7 +15,7 @@ const Home = () => {
     </h1>
 
     <p>
-      Hello! I'm Asandile Nkala, a versatile tech enthusiast with a strong interest in 
+      Hello! I'm Asandile Nkala, a versatile tech enthusiast with a strong interest in Softwar Engineering 
       Cloud Computing, Network Engineering, Cybersecurity, and Hardware Systems. 
       I enjoy solving complex problems and constantly expanding my knowledge across various
       domains of technology. Whether it's building efficient software, securing digital 
