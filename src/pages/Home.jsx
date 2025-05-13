@@ -11,13 +11,16 @@ const Home = () => {
   <div className="home-left">
   <h1 className="heading-h1">Welcome to My Portfolio</h1>
     <h1 className="title-h1">
-      Hi, I'm Asandile Nkala.<br />I'm a Software Developer
+      Hi, I'm Asandile Nkala.<br />I'm passionate about Technology and Innovation.
     </h1>
 
     <p>
-      Hello! I'm Asandile Nkala, a passionate Software Developer specializing in Software Engineering.
-      With a keen interest in solving complex problems and a dedication to continuous learning,
-      I thrive in creating efficient and innovative software solutions...
+      Hello! I'm Asandile Nkala, a versatile tech enthusiast with a strong foundation in 
+      Cloud Computing, Network Engineering, Cybersecurity, and Hardware Systems. 
+      I enjoy solving complex problems and constantly expanding my knowledge across various
+      domains of technology. Whether it's building efficient software, securing digital 
+      infrastructure, or exploring the intricacies of hardware, I'm driven by curiosity 
+      and a commitment to creating impactful solutions.
     </p>
 
     <div className="contact-container">
