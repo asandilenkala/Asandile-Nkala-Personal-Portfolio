@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -16,20 +17,30 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message!');
-    setFormData({ name: '', email: '', message: '' });
+
+    emailjs.send(
+      'service_u8k7imo',     // from EmailJS
+      'template_i2tk9ne',    // from EmailJS
+      formData,
+      'pBvRnGbDfYKOUmf1H'         // public key
+    )
+    .then((result) => {
+      console.log(result.text);
+      alert('Thank you for your message!');
+      setFormData({ name: '', email: '', message: '' });
+    }, (error) => {
+      console.error(error.text);
+      alert('Something went wrong. Please try again.');
+    });
   };
 
   return (
     <div className="container mt-5 contact-container">
       <h2 className="text-center mb-4">Contacts</h2>
-
       <h4 className="text-center">
         If you require any further information, please feel free to reach out to me.
       </h4>
 
-      {/* Contact Form */}
       <form onSubmit={handleSubmit} className="mt-5 contact-form">
         <div className="form-group">
           <label htmlFor="name">Your Name:</label>
