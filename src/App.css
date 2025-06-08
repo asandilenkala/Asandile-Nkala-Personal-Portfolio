@@ -324,7 +324,7 @@ ul {
   display: inline-block;
   white-space: nowrap;
   padding-left: 100%;
-  animation: scrollTicker 10s linear infinite;
+  animation: scrollTicker 20s linear infinite;
   font-size: 1.5rem;
   color: red;
 }
@@ -338,7 +338,7 @@ ul {
   }
 }
 
-/*Project Style*/
+/*Project & Achievements Style*/
 .projects-container {
   padding: 2rem;
   color: white;
@@ -352,13 +352,13 @@ ul {
   text-align: center;
 }
 
-.projects-grid {
+.projects-grid , .certificates-grid {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-.project-card {
+.project-card , .certificates-card {
   background-color: #1e1e1e;
   border: 1px solid #333;
   padding: 1.5rem;
@@ -366,12 +366,12 @@ ul {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project-card:hover {
+.project-card:hover , .certificates-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 15px #ff4d4d88;
 }
 
-.project-title {
+.project-title , .certificates-title {
   font-size: 1.3rem;
   color: #ff0000;
   margin-bottom: 0.5rem;
@@ -397,7 +397,7 @@ ul {
   color: #fff;
 }
 
-.project-link {
+.project-link , .certificates-link {
   color: #00acee;
   text-decoration: none;
   font-weight: bold;
@@ -409,7 +409,10 @@ ul {
 }
 
 
-
+.certificate-img {
+  height: 350px;
+  width: 370px;
+}
 
 
 

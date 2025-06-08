@@ -3,43 +3,52 @@ import React from 'react';
 const achievements = [
   {
     name: "Software Engineering Course",
-    link: "https://www.hyperiondev.com/portfolio/244218/",
+    link: "/HyperionDev Certificate.png",
+    isImage: true,
   },
   {
     name: "AWS Cloud Technical Essentials",
-    link: "https://www.coursera.org/account/accomplishments/verify/BP28GJGNLR9G",
+    link: "/AWS Cloud Technical Essentials.png",
+    isImage: true,
   },
   {
     name: "Google Cloud Fundamentals: Core Infrastructure",
-    link: "https://www.coursera.org/account/accomplishments/verify/N67SJ3FJP0JL",
+    link: "/Google Cloud Fundamentals- Core Infrastructure.png",
+    isImage: true,
   },
   {
     name: "Introduction to Networking and Cloud Computing",
-    link: "https://www.coursera.org/account/accomplishments/verify/1V77Q7I6IHFW",
+    link: "/Introduction to Networking and Cloud Computing.png",
+    isImage: true,
   },
   {
     name: "Introduction to Cloud Computing",
-    link: "https://www.coursera.org/account/accomplishments/verify/O2HMTA15T02X",
+    link: "/Introduction to Cloud Computing.png",
+    isImage: true,
   },
   {
-    name: "Write Professional Emails in English",
-    link: "https://www.coursera.org/account/accomplishments/verify/9D04ZDVQR0LM",
+    name: "Introduction to Hardware and Operating Systems",
+    link: "/Introduction to Hardware and Operating Systems.png",
+    isImage: true,
   },
   {
-    name: "Verbal Communications and Presentation Skills",
-    link: "https://www.coursera.org/account/accomplishments/verify/BTFG5G8RYUYE",
+    name: "Introduction to Software, Programming, and Databases",
+    link: "/Introduction to Software, Programming, and Databases.png",
+    isImage: true,
   },
   {
     name: "Generative AI: Introduction and Applications",
-    link: "https://www.coursera.org/account/accomplishments/verify/GT0I0GBTZEY6",
+    link: "/Generative AI- Introduction and Applications.png",
   },
   {
-    name: "Active Listening: Enhancing Communication Skills",
-    link: "https://www.coursera.org/account/accomplishments/verify/G6N8D5NICDPI",
+    name: "Introduction to Microsoft Azure Cloud Services",
+    link: "/Introduction to Microsoft Azure Cloud Services.png",
+    isImage: true,
   },
   {
     name: "Generative AI: Prompt Engineering Basics",
-    link: "https://www.coursera.org/account/accomplishments/verify/435ZK9WBNHXO",
+    link: "/Generative AI- Prompt Engineering Basics.png",
+    isImage: true,
   },
   {
     name: "Alx Aice AI Career Essentials Certificate",
@@ -57,24 +66,28 @@ function Achievements() {
       </h3>
       <hr />
       <br />
-      <ul className="space-y-4">
+
+
+      <div className="certificates-grid">
         {achievements.map((item, index) => (
-          <li
-            key={index}
-            className="p-4 bg-white shadow-md rounded-md border hover:shadow-lg transition duration-200"
-          >
-            <h3 className="text-xl font-semibold text-gray-800">{item.name}</h3>
-            <a
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline mt-2 inline-block"
-            >
-              View Certificate
-            </a>
-          </li>
+          <div className="certificates-card">
+            <h3 className="certificates-title">{item.name}</h3>
+            
+            <div className="certificates-meta">
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="certificates-link"
+              >
+                <img src={item.link} className='certificate-img'/>
+              </a>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
+
+
     </div>
   );
 }

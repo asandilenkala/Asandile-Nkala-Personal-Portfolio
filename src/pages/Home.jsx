@@ -1,6 +1,5 @@
 import React from 'react';
 import profile from '../folder/Asandile.jpg';
-import instagramIcon from '../folder/instagram.png';
 import linkedinIcon from '../folder/linkedin.png';
 import githubIcon from '../folder/github.png';
 
@@ -25,11 +24,6 @@ const Home = () => {
 
     <div className="contact-container">
       <ul className="contact-list">
-        <li>
-          <a href="https://www.instagram.com/asandile_nkala/" target="_blank" rel="noopener noreferrer">
-            <img src={instagramIcon} alt="Instagram" height="30px" width="30px" />
-          </a>
-        </li>
         <li>
           <a href="https://www.linkedin.com/in/asandile-nkala-37b635256/" target="_blank" rel="noopener noreferrer">
             <img src={linkedinIcon} alt="LinkedIn" height="30px" width="30px" />
