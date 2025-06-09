@@ -80,7 +80,7 @@ function Achievements() {
                 rel="noopener noreferrer"
                 className="certificates-link"
               >
-                <img src={item.link} className='certificate-img'/>
+                <img src={item.link} alt="Certificate of Achievement" className='certificate-img'/>
               </a>
             </div>
           </div>
