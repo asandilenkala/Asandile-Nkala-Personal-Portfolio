@@ -42,7 +42,7 @@ const Home = () => {
     rel="noopener noreferrer"
     style={{
       textDecoration: 'none',
-      color: '#007bff',
+      color: '#ff0000',
       fontWeight: '500',
       marginRight: '10px',
     }}
