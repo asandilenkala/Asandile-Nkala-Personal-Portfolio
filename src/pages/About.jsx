@@ -85,7 +85,7 @@ function About() {
               </ul>
             </div>
           )}
-          <br /><br />
+          <br />
         </li>
 
         {/* Cloud Associate at CAPACITI */}
@@ -106,7 +106,7 @@ function About() {
               </ul>
             </div>
           )}
-          <br /><br />
+          <br />
         </li>
 
         {/* Tutor at UCT */}
